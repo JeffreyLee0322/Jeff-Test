@@ -1,0 +1,152 @@
+$ cd Git-Test/
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test
+$ LS
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test
+$ ls
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test
+$ git init
+Initialized empty Git repository in F:/Project_dev/BLE-Repository/Git-Test/.git/
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git add Test.c
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git commit -m 'Test.c'
+[master (root-commit) 493ad5b] Test.c
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Test.c
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Test.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git commit -m 'Test.c'
+On branch master
+Changes not staged for commit:
+        modified:   Test.c
+
+no changes added to commit
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Test.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git add Test.c
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git commit -m 'Test.c'
+[master ab1d42b] Test.c
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ clear
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git remote add WiFi-Display https://github.com/JeffreyLee0322/WiFi-Display.git
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push WiFi-Display
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream WiFi-Display master
+
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push --set-upstream WiFi-Display master
+Fatal: AggregateException encountered.
+Username for 'https://github.com': JeffreyLee0322
+To https://github.com/JeffreyLee0322/WiFi-Display.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/JeffreyLee0322/WiFi-Display.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push --set-upstream TestNight master
+fatal: 'TestNight' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git remote add Git-Test https://github.com/JeffreyLee0322/TestNight.git       
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push --set-upstream TestNight master
+fatal: 'TestNight' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git remote add TestNight https://github.com/JeffreyLee0322/TestNight.git
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push --set-upstream TestNight master
+Fatal: HttpRequestException encountered.
+Username for 'https://github.com': JeffreyLee0322
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/JeffreyLee0322/TestNight.git/'
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$ git push --set-upstream Git-Test master
+Fatal: AggregateException encountered.
+Username for 'https://github.com': JeffreyLee0322
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 456 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/JeffreyLee0322/TestNight.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from Git-Test.
+
+Administrator@PC-20150907OYTZ MINGW64 /f/Project_dev/BLE-Repository/Git-Test (master)
+$
